@@ -1,0 +1,8 @@
+---
+- name: Intall yum packages.
+  yum: pkg={{ item }} state=latest
+  with_items:
+    - nodejs
+    - npm
+
+- npm: name=coffee-script global=yes state=latest
